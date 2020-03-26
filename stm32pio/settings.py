@@ -21,7 +21,7 @@ config_default = collections.OrderedDict(
             # macOS default: 'Applications' folder
             "/Applications/STMicroelectronics/STM32CubeMX.app/Contents/Resources/STM32CubeMX" if my_os == 'Darwin' else
             # Linux (Arch) 
-            pathlib.Path.("/opt/stm32cubemx/STM32CubeMX.exe") if my_os == 'Linux' else
+            pathlib.Path("/opt/stm32cubemx/STM32CubeMX.exe") if my_os == 'Linux' else
             # Windows default: Program Files
             "C:/Program Files/STMicroelectronics/STM32Cube/STM32CubeMX/STM32CubeMX.exe" if my_os == 'Windows' else None
     },
