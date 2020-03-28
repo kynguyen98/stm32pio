@@ -154,4 +154,5 @@ stm32pio changelog:
         - Changed: more logging output
         - Changed: change some methods signatures to return result value
     ver. 1.0 (20.3.20):
-        - Added: AUR support for Arch based system
+        - New: Arch based system supported
+
