@@ -143,7 +143,6 @@ stm32pio changelog:
         - Changed: check whether there is already a platformio.ini file and warn in this case on PlatformIO init stage
         - Changed: sort imports in the alphabetic order
         - Changed: use configparser to test project patching
-
     ver. 0.96 (17.12.19):
         - Fix: generate_code() doesn't destroy the temp folder after execution
         - Fix: improved and actualized docs, comments, annotations
@@ -154,3 +153,5 @@ stm32pio changelog:
         - Changed: use file statistic to check its size instead of reading the whole content
         - Changed: more logging output
         - Changed: change some methods signatures to return result value
+    ver. 1.0 (20.3.20):
+        - Added: AUR support for Arch based system
