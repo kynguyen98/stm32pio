@@ -8,14 +8,14 @@ with open("README.md", 'r') as readme:
 setuptools.setup(
     name='stm32pio',
     version=stm32pio.app.__version__,
-    author='ussserrr',
-    author_email='andrei4.2008@gmail.com',
+    author='kynguyen98',
+    author_email='nguyenhongky1998@gmail.com',
     description="Small cross-platform Python app that can create and update PlatformIO projects from STM32CubeMX .ioc "
                 "files. It uses STM32CubeMX to generate a HAL-framework based code and alongside creates PlatformIO "
                 "project with the compatible framework specified",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/ussserrr/stm32pio",
+    url="https://github.com/kynguyen98/stm32pio",
     packages=setuptools.find_packages(),
     classifiers=[
         "Programming Language :: Python :: 3 :: Only",
