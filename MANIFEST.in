@@ -6,3 +6,5 @@ include TODO.md
 include .gitignore
 recursive-include stm32pio-test-project *
 include screenshots/*.png
+include stm32pio_gui/icons/*.svg
+include stm32pio_gui/main.qml
