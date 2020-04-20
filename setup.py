@@ -25,11 +25,28 @@ setuptools.setup(
         "Environment :: Console",
         "Topic :: Software Development :: Embedded Systems"
     ],
+    keywords=[
+        'platformio',
+        'stm32',
+        'stm32cubemx',
+        'cubemx'
+    ],
     python_requires='>=3.6',
+    setup_requires=[
+        'wheel'
+    ],
+    extras_require={
+        'GUI': [
+            'PySide2'
+        ]
+    },
     include_package_data=True,
     entry_points={
         'console_scripts': [
             'stm32pio = stm32pio.app:main'
+        ],
+        'gui_scripts': [
+            'stm32pio_gui = stm32pio_gui.app:main [GUI]'
         ]
     }
 )
