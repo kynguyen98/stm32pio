@@ -27,7 +27,11 @@ config_default = collections.OrderedDict(
     },
     project={
         # (default is OK) See CubeMX user manual PDF (UM1718) to get other useful options
-        'cubemx_script_content': "config load $cubemx_ioc_full_filename\ngenerate code $project_path\nexit",
+        'cubemx_script_content': inspect.cleandoc('''
+            config load ${ioc_file_absolute_path}
+            generate code ${project_dir_absolute_path}
+            exit
+        ''') + '\n',
 
         # Override the defaults to comply with CubeMX project structure. This should meet INI-style requirements. You
         # can include existing sections, too (e.g.
@@ -38,10 +42,13 @@ config_default = collections.OrderedDict(
             [platformio]
             include_dir = Inc
             src_dir = Src
-        ''') + '\n'
+        ''') + '\n',
+        # Runtime-determined values
+        'board': '',
+        'ioc_file': ''  # required
     }
 )
 
 config_file_name = 'stm32pio.ini'
 
-log_function_fieldwidth = 26
+log_fieldwidth_function = 25 + 1
